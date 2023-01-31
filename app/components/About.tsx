@@ -1,42 +1,74 @@
 'use client'
 
-import { motion } from "framer-motion";
-import {PageInfo} from "../../models/pageInfo";
-import {urlFor} from "../../sanity";
+import { PageInfo } from "../../models/pageInfo";
 
 type Props = {
     pageInfo: PageInfo;
 }
-const About = ({pageInfo}: Props) => {
+const About = ({ pageInfo }: Props) => {
     return (
         <div className="flex flex-col relative justify-evenly mx-auto items-center
-        h-screen text-center md:text-left max-w-7xl px-10 background-pattern-rhombus-left">
+        h-screen text-center md:text-left max-w-7xl px-10">
             <h3 className="section-title">
-                About
+                Know me
             </h3>
-            <motion.img src={urlFor(pageInfo.profilePic).url()}
-                        initial={{
-                            x:-200,
-                            opacity:0
-                        }}
-                        whileInView={{
-                            x: 0,
-                            opacity:1
-                        }}
-                        transition={{
-                            duration: 0.8
-                        }}
-                        className="mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full
-                        object-cover md:rounded-lg md:w-64 md:h-64"
-            />
-            <div className="space-y-10 px-0 md:px-10">
-                <h4 className="text-4xl font-semibold">
-                    Here is a <span className="underline underline-offset-8 decoration-defaultColor/50">little</span> background
-                </h4>
-                <p className="text-base">
-                    {pageInfo.backgroudInformation}
-                </p>
+            <div className="flex flex-col justify-around">
+                <div>
+                    <div className="flex flex-col px-0 md:px-10 md:flex-row md:justify-between">
+                        <div className="flex-[0.8] md:flex-[0.9]">
+                            <h4 className="text-3xl font-semibold">
+                                I'm{" "}
+                                <span className="underline underline-offset-8 decoration-defaultColor/50">{pageInfo.name}</span>,
+                                {" "}a {pageInfo.role}
+                            </h4>
+                            <p className="text-base pt-3 text-justify">
+                                {pageInfo.backgroudInformation}
+                            </p>
+                        </div>
+                        {/* details */}
+                        <div className="mt-10 md:mt-0 md:w-1/5 lg:w-1/3">
+                            <div className="pb-5 border-b border-b-gray-400">
+                                <span className="text-gray-300 font-bold">Name:</span> <span>{pageInfo.name}</span>
+                            </div>
+                            <div className="py-5 border-b border-b-gray-400">
+                                <span className="text-gray-300 font-bold">Email:</span> <span>{pageInfo.email}</span>
+                            </div>
+                            <div className="py-5 border-b border-b-gray-400">
+                                <span className="text-gray-300 font-bold">Phone:</span> <span>{pageInfo.phoneNumber}</span>
+                            </div>
+                            <div className="py-5">
+                                <span className="text-gray-300 font-bold">From:</span> <span>{pageInfo.address}</span>
+                            </div>
+                            <div className="py-5">
+                                <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="hidden mt-6 md:sticky md:bottom-5 md:flex md:flex-row md:justify-evenly">
+                    <div className="text-center">
+                        <h4 className="text-6xl mb-3 "><span>10</span> +</h4>
+                        <p className="text-light">Years Experience</p>
+                    </div>
+                    <div className="border-r-[1px] border-r-gray-400 h-24"></div>
+                    <div className="text-center">
+                        <h4 className="text-6xl mb-3"><span>10</span> +</h4>
+                        <p className="text-light">Years Experience</p>
+                    </div>
+                    <div className="border-r-[1px] border-r-gray-400"></div>
+                    <div className="text-center">
+                        <h4 className="text-6xl mb-3"><span>10</span> +</h4>
+                        <p className="text-light">Years Experience</p>
+                    </div>
+                    <div className="border-r-[1px] border-r-gray-400"></div>
+                    <div className="text-center">
+                        <h4 className="text-6xl mb-3"><span>10</span> +</h4>
+                        <p className="text-light">Years Experience</p>
+                    </div>
+
+                </div>
             </div>
+
         </div>
     );
 };

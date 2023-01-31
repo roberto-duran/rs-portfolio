@@ -15,13 +15,18 @@
             text-gray-500 text-2xl;
   }
   .section-sub-title {
-    @apply absolute top-36 uppercase tracking-[3px] text-gray-500;
+    @apply absolute top-36 uppercase tracking-[3px] text-gray-200;
   }
 
   .contact-input {
     @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-defaultBorderColor
     text-gray-500 placeholder-gray-500 transition-all focus:border-defaultColor
     focus:text-defaultColor hover:border-defaultColor;
+  }
+
+  .contact-info {
+    @apply flex items-center p-4 rounded-sm border border-defaultColor opacity-60 space-x-5 justify-center
+    bg-lightBackgroundColor
   }
 }
 

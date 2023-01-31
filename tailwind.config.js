@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         defaultColor: "#2a8b43",
-        defaultBorderColor:"#272a27"
+        defaultBackgroundColor: "#0b1223",
+        lightBackgroundColor: "#131d36",
+        defaultBorderColor: "#272a27",
       },
     },
   },
