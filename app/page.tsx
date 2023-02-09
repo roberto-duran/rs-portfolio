@@ -4,20 +4,18 @@ import WorkExperience from "./components/WorkExperience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
-import {PageInfo} from "../models/pageInfo";
-import {Experience} from "../models/experience";
-import {Skill} from "../models/skill";
-import {Project} from "../models/project";
 import {fetchPageInfo} from "../utils/fetchPageInfo";
 import {fetchExperiences} from "../utils/fetchExperiences";
 import {fetchSkills} from "../utils/fetchSkills";
 import {fetchProjects} from "../utils/fetchProjects";
 
 const HomePage  = async () => {
-    const pageInfo: PageInfo = await fetchPageInfo();
-    const experiences: Experience[] = await fetchExperiences();
-    const skills: Skill[] = await fetchSkills();
-    const projects: Project[] = await fetchProjects();
+    const [pageInfo, experiences, skills, projects] =
+        await Promise.all([
+        fetchPageInfo(),
+        fetchExperiences(),
+        fetchSkills(),
+        fetchProjects()]);
 
     return (
         <div>

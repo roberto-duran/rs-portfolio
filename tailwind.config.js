@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        defaultColor: "#2a8b43",
+        defaultColor: "#589f68",
         defaultBackgroundColor: "#0b1223",
         lightBackgroundColor: "#131d36",
         defaultBorderColor: "#272a27",

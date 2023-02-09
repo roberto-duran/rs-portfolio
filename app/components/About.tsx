@@ -50,6 +50,7 @@ const About = ({ pageInfo }: Props) => {
                         <h4 className="text-6xl mb-3 "><span>10</span> +</h4>
                         <p className="text-light">Years Experience</p>
                     </div>
+
                     <div className="border-r-[1px] border-r-gray-400 h-24"></div>
                     <div className="text-center">
                         <h4 className="text-6xl mb-3"><span>10</span> +</h4>

@@ -11,11 +11,11 @@
            hover:text-defaultColor/90 mx-1 ;
   }
   .section-title {
-    @apply absolute top-24 uppercase tracking-[20px]
+    @apply absolute top-16 lg:top-24 uppercase tracking-[20px]
             text-gray-500 text-2xl;
   }
   .section-sub-title {
-    @apply absolute top-36 uppercase tracking-[3px] text-gray-200;
+    @apply absolute top-28 lg:top-36 uppercase tracking-[3px] text-gray-200;
   }
 
   .contact-input {
@@ -27,6 +27,12 @@
   .contact-info {
     @apply flex items-center p-4 rounded-sm border border-defaultColor opacity-60 space-x-5 justify-center
     bg-lightBackgroundColor
+  }
+  .circle-progress .circle-bg {
+    @apply stroke-[#589f68] opacity-20
+  }
+  .circle-progress .circle {
+    @apply stroke-[#589f68] fill-none transform -rotate-90
   }
 }
 
