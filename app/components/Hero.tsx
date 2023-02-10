@@ -36,18 +36,18 @@ const Hero = ({ pageInfo }: Props) => {
                         <Cursor cursorColor="#2a8b43" />
                     </h1>
                     <div className="pt-5">
-                        <Link href="#about">
+                        <a href="#about">
                             <button className="heroButton">About</button>
-                        </Link>
-                        <Link href="#experience">
+                        </a>
+                        <a href="#experience">
                             <button className="heroButton">Experience</button>
-                        </Link>
-                        <Link href="#skills">
+                        </a>
+                        <a href="#skills">
                             <button className="heroButton">Skills</button>
-                        </Link>
-                        <Link href="#projects">
+                        </a>
+                        <a href="#projects">
                             <button className="heroButton">Projects</button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
