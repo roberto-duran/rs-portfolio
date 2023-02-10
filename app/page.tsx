@@ -4,18 +4,20 @@ import WorkExperience from "./components/WorkExperience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
-import {fetchPageInfo} from "../utils/fetchPageInfo";
-import {fetchExperiences} from "../utils/fetchExperiences";
-import {fetchSkills} from "../utils/fetchSkills";
-import {fetchProjects} from "../utils/fetchProjects";
+import {getPageInfo} from '../lib/getPageInfo'
+import {getExperience} from '../lib/getExperience'
+import {getSkills} from '../lib/getSkills'
+import {getProjects} from '../lib/getProjects'
+
 
 const HomePage  = async () => {
     const [pageInfo, experiences, skills, projects] =
         await Promise.all([
-        fetchPageInfo(),
-        fetchExperiences(),
-        fetchSkills(),
-        fetchProjects()]);
+            getPageInfo(),
+            getExperience(),
+            getSkills(),
+            getProjects()
+        ]);
 
     return (
         <div>
@@ -28,6 +30,7 @@ const HomePage  = async () => {
             </section>
 
             <section id="experience" className="snap-center">
+                {/*@ts-ignore*/}
                 <WorkExperience experiences={experiences} />
             </section>
 
@@ -36,6 +39,7 @@ const HomePage  = async () => {
             </section>
 
             <section id="projects" className="snap-start">
+                {/*@ts-ignore*/}
                 <Projects projects={projects} />
             </section>
 

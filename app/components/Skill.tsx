@@ -1,21 +1,18 @@
 'use client'
 import React from 'react';
-import Image from "next/image";
 import { Skill as SkillType } from '../../models/skill';
-import { urlFor } from "../../sanity";
 
 type Props = {
-    directionLeft?: boolean
     skill: SkillType
 };
 
-export default function Skill({ directionLeft, skill }: Props) {
+export default function Skill({ skill }: Props) {
     return (
         <div className="flex flex-col cursor-pointer">
             <div className="flex justify-between mb-1">
                 <div className="flex items-center text-base font-medium dark:text-white pl-1">
-                    <Image
-                        src={urlFor(skill.image).url()}
+                    <img
+                        src={skill.image}
                         alt={skill.title}
                         height={10}
                         width={10}

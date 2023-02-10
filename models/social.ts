@@ -1,7 +1,6 @@
-import {SanityBody} from "./sanityI";
 
-export interface Social extends SanityBody {
-    _type: "social"
+export interface Social {
+    id: string;
     title: string;
-    url: string;
+    url: string | null;
 }

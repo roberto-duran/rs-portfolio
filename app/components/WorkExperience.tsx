@@ -3,7 +3,7 @@ import ExperienceCard from './ExperienceCard'
 import {Experience} from "../../models/experience";
 
 type Props = {
-    experiences: Experience[]
+    experiences: Experience[] | null
 }
 
 export default function WorkExperience({experiences}: Props) {
@@ -15,8 +15,8 @@ export default function WorkExperience({experiences}: Props) {
         </h3>
 
         <div className="w-full flex space-x-5 overflow-x-scroll ml-5 p-10 snap-x snap-mandatory">
-            {experiences.map((experience) => (
-                <ExperienceCard key={experience._id} experience={experience} />
+            {experiences?.map((experience) => (
+                <ExperienceCard key={experience.id} experience={experience} />
             ))}
 
         </div>

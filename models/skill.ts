@@ -1,8 +1,7 @@
-import {SanityBody, SanityImage} from "./sanityI";
-
-export interface Skill extends SanityBody {
-    _type: "skill";
-    image: SanityImage;
+export interface Skill {
+    id: string;
+    image: string;
     progress: number;
     title: string;
+    color: string;
 }

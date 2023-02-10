@@ -13,6 +13,7 @@ const Header = ({socials}: Props) => {
         window.location.href = `#${event.currentTarget.dataset.link}`;
     }
 
+
     return (
         <header className="sticky top-0 p-5 flex items-start justify-between
         max-w-7xl mx-auto z-20 xl:items-center">
@@ -32,8 +33,9 @@ const Header = ({socials}: Props) => {
                         }}
                         className="flex flex-row items-center">
                 { socials.map((social) => (
+                    // @ts-ignore
                     <SocialIcon url={social.url}
-                                key={social._id}
+                                key={social.id}
                                 fgColor="gray"
                                 bgColor="transparent"
                                 target="_blank"

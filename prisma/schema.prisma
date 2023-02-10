@@ -13,18 +13,18 @@ datasource db {
 }
 
 model User {
-  id                     String       @id @default(cuid())
-  email                  String       @unique @db.Citext
-  name                   String       @db.Citext
-  image                  String
-  role                   String?      @db.Citext
-  back_ground_infomation String?      @db.Citext
-  phone_number           String?      @db.Citext
-  address                String?      @db.Citext
-  Social                 Social[]
-  Experience             Experience[]
-  createdAt              DateTime     @default(now())
-  updatedAt              DateTime     @default(now()) @updatedAt
+  id                      String       @id @default(cuid())
+  email                   String       @unique @db.Citext
+  name                    String       @db.Citext
+  image                   String
+  role                    String?      @db.Citext
+  back_ground_information String?      @db.Citext
+  phone_number            String?      @db.Citext
+  address                 String?      @db.Citext
+  Social                  Social[]
+  Experience              Experience[]
+  createdAt               DateTime     @default(now())
+  updatedAt               DateTime     @default(now()) @updatedAt
 }
 
 model Social {
@@ -52,7 +52,7 @@ model Experience {
   createdAt           DateTime              @default(now())
   updatedAt           DateTime              @updatedAt
   User                User?                 @relation(fields: [user_id], references: [id])
-  Skill_to_Experience Skill_to_Experience[]
+  skills              Skill_to_Experience[]
 }
 
 model Skill {
@@ -88,12 +88,12 @@ model Skill_to_Experience {
 }
 
 model Project {
-  id               String             @id @default(cuid())
-  title            String             @db.Citext
-  description      String             @db.Citext
-  image            String
-  url              String
-  createdAt        DateTime           @default(now())
-  updatedAt        DateTime           @default(now()) @updatedAt
-  Skill_to_Project Skill_to_Project[]
+  id          String             @id @default(cuid())
+  title       String             @db.Citext
+  description String             @db.Citext
+  image       String
+  url         String
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @default(now()) @updatedAt
+  skills      Skill_to_Project[]
 }

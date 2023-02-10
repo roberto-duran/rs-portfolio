@@ -2,9 +2,7 @@
 
 import React from "react";
 import {motion} from "framer-motion";
-import Image from "next/image";
 import {Project} from "../../models/project";
-import {urlFor} from "../../sanity";
 
 type Props = {
     projects: Project[];
@@ -27,7 +25,7 @@ export default function Projects({projects}: Props) {
         snap-mandatory z-20"
             >
                 {projects.map((project, i) => (
-                    <div key={project._id}
+                    <div key={project.id}
                         className="w-screen flex flex-col flex-shrink-0 h-screen
             snap-center space-y-5 items-center justify-center p-20 md:p-44">
                         <motion.div
@@ -39,8 +37,8 @@ export default function Projects({projects}: Props) {
                             transition={{duration: 1.2}}
                             viewport={{once: true}}
                         >
-                            <Image
-                                src={urlFor(project.image).url()}
+                            <img
+                                src={project.image}
                                 alt={project.title}
                                 width={300}
                                 height={300}
@@ -55,19 +53,17 @@ export default function Projects({projects}: Props) {
                             </h4>
 
                             <div className="flex items-center space-x-2 justify-center">
-                                {project.technologies.map((technology) => (
-                                    <Image src={urlFor(technology.image).url()}
-                                           alt={technology.title}
+                                {project.skills.map((skill) => (
+                                    <img src={skill.image}
+                                           alt={skill.title}
                                            className="h-10 w-10 hover:scale-110"
-                                           height={40}
-                                           key={technology._id}
-                                           width={40}
+                                           key={skill.id}
                                     />
                                 ))}
                             </div>
 
                             <p className="text-lg text-center md:text-left">
-                                {project.summary}
+                                {project.description}
                             </p>
                         </div>
                     </div>

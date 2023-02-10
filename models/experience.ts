@@ -1,16 +1,15 @@
-import {SanityBody, SanityImage} from "./sanityI";
-import {Technology} from "./technology";
+import {Skill} from './skill'
 
-export interface Experience extends SanityBody {
-    _type: "experience";
-    companyName: string;
-    companyDescription: string;
-    companyImage: SanityImage;
-    companyLogo: SanityImage;
-    dateStarted: Date;
-    dateEnded: Date;
-    isCurrentlyWorkingHere: boolean;
-    jobTitle: string;
-    points: string[];
-    technologies: Technology[];
+export interface Experience {
+    id: string;
+    job_title: string;
+    company_logo: string;
+    company_image: string;
+    company_name: string;
+    company_description: string;
+    date_started: string;
+    date_ended: string;
+    job_description: string;
+    url: string;
+    skills: Skill[];
 }

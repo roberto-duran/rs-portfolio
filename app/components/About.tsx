@@ -3,7 +3,7 @@
 import { PageInfo } from "../../models/pageInfo";
 
 type Props = {
-    pageInfo: PageInfo;
+    pageInfo: PageInfo | null;
 }
 const About = ({ pageInfo }: Props) => {
     return (
@@ -18,26 +18,26 @@ const About = ({ pageInfo }: Props) => {
                         <div className="flex-[0.8] md:flex-[0.9]">
                             <h4 className="text-3xl font-semibold">
                                 I'm{" "}
-                                <span className="underline underline-offset-8 decoration-defaultColor/50">{pageInfo.name}</span>,
-                                {" "}a {pageInfo.role}
+                                <span className="underline underline-offset-8 decoration-defaultColor/50">{pageInfo?.name}</span>,
+                                {" "}a {pageInfo?.role}
                             </h4>
                             <p className="text-base pt-3 text-justify">
-                                {pageInfo.backgroudInformation}
+                                {pageInfo?.back_ground_information}
                             </p>
                         </div>
                         {/* details */}
                         <div className="mt-10 md:mt-0 md:w-1/5 lg:w-1/3">
                             <div className="pb-5 border-b border-b-gray-400">
-                                <span className="text-gray-300 font-bold">Name:</span> <span>{pageInfo.name}</span>
+                                <span className="text-gray-300 font-bold">Name:</span> <span>{pageInfo?.name}</span>
                             </div>
                             <div className="py-5 border-b border-b-gray-400">
-                                <span className="text-gray-300 font-bold">Email:</span> <span>{pageInfo.email}</span>
+                                <span className="text-gray-300 font-bold">Email:</span> <span>{pageInfo?.email}</span>
                             </div>
                             <div className="py-5 border-b border-b-gray-400">
-                                <span className="text-gray-300 font-bold">Phone:</span> <span>{pageInfo.phoneNumber}</span>
+                                <span className="text-gray-300 font-bold">Phone:</span> <span>{pageInfo?.phone_number}</span>
                             </div>
                             <div className="py-5">
-                                <span className="text-gray-300 font-bold">From:</span> <span>{pageInfo.address}</span>
+                                <span className="text-gray-300 font-bold">From:</span> <span>{pageInfo?.address}</span>
                             </div>
                             <div className="py-5">
                                 <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>

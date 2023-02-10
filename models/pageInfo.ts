@@ -1,14 +1,11 @@
-import {SanityBody, SanityImage} from "./sanityI";
 
-
-export interface PageInfo extends SanityBody {
-    _type: "pageInfo";
-    address: string;
-    backgroudInformation: string;
+export interface PageInfo {
+    id: string;
     email: string;
-    role: string;
-    heroImage: SanityImage;
     name: string;
-    phoneNumber: string
-    profilePic: SanityImage;
+    role: string | null;
+    phone_number: string | null;
+    address: string | null;
+    image: string;
+    back_ground_information: string | null;
 }
