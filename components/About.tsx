@@ -35,8 +35,9 @@ const About = ({ pageInfo }: Props) => {
                                     <span className="text-gray-300 font-bold">Email:</span> <span>{pageInfo?.email}</span>
                                 </div>
                             </div>
-                            <div className="flex flex-row md:flex-col justify-evenly border-b border-b-gray-400">
-                                <div className="py-5 ">
+                            <div className="flex flex-row md:flex-col justify-evenly border-b border-b-gray-400
+                            sm:border-b-transparent sm:border-b-transparent">
+                                <div className="py-5 border-b-transparent border-b-transparent md:border-b md:border-b-gray-400">
                                     <span className="text-gray-300 font-bold">Phone:</span> <span>{pageInfo?.phone_number}</span>
                                 </div>
                                 <div className="py-5">
@@ -44,9 +45,9 @@ const About = ({ pageInfo }: Props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="py-5">
-                            <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>
-                        </div>
+                    </div>
+                    <div className="py-5">
+                        <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>
                     </div>
                 </div>
                 <div className="hidden mt-6 md:sticky md:bottom-5 md:flex md:flex-row md:justify-evenly">

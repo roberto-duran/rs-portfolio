@@ -3,6 +3,53 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { db } from "../lib/db";
+import {Metadata} from 'next'
+
+export const metadata: Metadata = {
+    title: {
+        default: 'Roberto Duran',
+        template: '%s | Roberto Duran',
+    },
+    description: 'Developer, writer, and creator.',
+    openGraph: {
+        title: 'Roberto Duran',
+        description: 'Developer, writer, and creator.',
+        url: 'https://robertoduran.me',
+        siteName: 'Roberto Duran',
+        images: [
+            {
+                url: 'https://robertoduran.me/api/roberto',
+                width: 1920,
+                height: 1080,
+            },
+        ],
+        locale: 'en-US',
+        type: 'website',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    twitter: {
+        title: 'Roberto Duran',
+        card: 'summary_large_image',
+    },
+    icons: {
+        shortcut: '/favicon.ico',
+    },
+    verification: {
+        google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
+        yandex: '14d2e73487fa6c71',
+    },
+};
+
 
 async function getSocials() {
 
