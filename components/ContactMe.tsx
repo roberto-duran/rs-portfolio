@@ -16,7 +16,7 @@ type Inputs = {
     message: string;
   };
 
-export default function contactMe({email, phone_number, address}: Props) {
+export default function ContactMe({email, phone_number, address}: Props) {
     const { register, handleSubmit } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         window.location.href = `mailto:info@robertoduran.me?subject=${formData.subject}&body=From ${formData.name} Message ${formData.message}`;

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { Skill as SkillType } from '../models/skill';
+import Image from 'next/image'
 
 type Props = {
     skill: SkillType
@@ -11,7 +12,7 @@ export default function Skill({ skill }: Props) {
         <div className="flex flex-col cursor-pointer">
             <div className="flex justify-between mb-1">
                 <div className="flex items-center text-base font-medium dark:text-white pl-1">
-                    <img
+                    <Image
                         src={skill.image}
                         alt={skill.title}
                         height={10}

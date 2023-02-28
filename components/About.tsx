@@ -17,7 +17,7 @@ const About = ({ pageInfo }: Props) => {
                     <div className="flex flex-col px-0 md:px-10 md:flex-row md:justify-between">
                         <div className="flex-[0.8] md:flex-[0.9]">
                             <h4 className="text-3xl font-semibold">
-                                I'm{" "}
+                                I&apos;m{" "}
                                 <span className="underline underline-offset-8 decoration-defaultColor/50">{pageInfo?.name}</span>,
                                 {" "}a {pageInfo?.role}
                             </h4>

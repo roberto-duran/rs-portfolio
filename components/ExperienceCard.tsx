@@ -3,6 +3,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import {Experience} from '../models/experience'
+import Image from 'next/image'
 
 type Props = {
     experience: Experience
@@ -26,7 +27,7 @@ export default function ExperienceCard({experience}: Props) {
                 <p className='font-bold text-2xl mt-1'>{experience.company_name}</p>
                 <div className='flex space-x-2 my-2'>
                     {experience.skills.map((skill) => (
-                        <img src={skill.image}
+                        <Image src={skill.image}
                              key={skill.id}
                              className='hover:scale-110'
                              width={35}

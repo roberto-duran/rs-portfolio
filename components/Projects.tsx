@@ -3,6 +3,7 @@
 import React from "react";
 import {motion} from "framer-motion";
 import {Project} from "../models/project";
+import Image from 'next/image'
 
 type Props = {
     projects: Project[];
@@ -37,7 +38,7 @@ export default function Projects({projects}: Props) {
                             transition={{duration: 1.2}}
                             viewport={{once: true}}
                         >
-                            <img
+                            <Image
                                 src={project.image}
                                 alt={project.title}
                                 width={300}
@@ -54,9 +55,11 @@ export default function Projects({projects}: Props) {
 
                             <div className="flex items-center space-x-2 justify-center">
                                 {project.skills.map((skill) => (
-                                    <img src={skill.image}
+                                    <Image src={skill.image}
                                            alt={skill.title}
-                                           className="h-10 w-10 hover:scale-110"
+                                           width={40}
+                                           height={40}
+                                           className="hover:scale-110"
                                            key={skill.id}
                                     />
                                 ))}
