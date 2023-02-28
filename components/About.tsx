@@ -1,6 +1,6 @@
 'use client'
 
-import { PageInfo } from "../../models/pageInfo";
+import { PageInfo } from "../models/pageInfo";
 
 type Props = {
     pageInfo: PageInfo | null;
@@ -26,22 +26,26 @@ const About = ({ pageInfo }: Props) => {
                             </p>
                         </div>
                         {/* details */}
-                        <div className="mt-10 md:mt-0 md:w-1/5 lg:w-1/3">
-                            <div className="pb-5 border-b border-b-gray-400">
-                                <span className="text-gray-300 font-bold">Name:</span> <span>{pageInfo?.name}</span>
+                        <div className="hidden sm:block mt-5 md:mt-0 md:w-1/5 lg:w-1/3">
+                            <div className="flex flex-row sm:flex-col justify-between">
+                                <div className="pb-5 sm:border-b sm:border-b-gray-400">
+                                    <span className="text-gray-300 font-bold">Name:</span> <span>{pageInfo?.name}</span>
+                                </div>
+                                <div className="py-5 border-b border-b-gray-400">
+                                    <span className="text-gray-300 font-bold">Email:</span> <span>{pageInfo?.email}</span>
+                                </div>
                             </div>
-                            <div className="py-5 border-b border-b-gray-400">
-                                <span className="text-gray-300 font-bold">Email:</span> <span>{pageInfo?.email}</span>
+                            <div className="flex flex-row md:flex-col justify-evenly border-b border-b-gray-400">
+                                <div className="py-5 ">
+                                    <span className="text-gray-300 font-bold">Phone:</span> <span>{pageInfo?.phone_number}</span>
+                                </div>
+                                <div className="py-5">
+                                    <span className="text-gray-300 font-bold">From:</span> <span>{pageInfo?.address}</span>
+                                </div>
                             </div>
-                            <div className="py-5 border-b border-b-gray-400">
-                                <span className="text-gray-300 font-bold">Phone:</span> <span>{pageInfo?.phone_number}</span>
-                            </div>
-                            <div className="py-5">
-                                <span className="text-gray-300 font-bold">From:</span> <span>{pageInfo?.address}</span>
-                            </div>
-                            <div className="py-5">
-                                <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>
-                            </div>
+                        </div>
+                        <div className="py-5">
+                            <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>
                         </div>
                     </div>
                 </div>

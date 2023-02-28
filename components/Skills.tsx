@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Skill from './Skill';
-import { Skill as SkillType } from '../../models/skill';
+import { Skill as SkillType } from '../models/skill';
 import SkillCircle from "./SkillCircle";
 
 type Props = {
@@ -31,7 +31,7 @@ export default function Skills({ skills }: Props) {
                     <SkillCircle title='DataBases' percentage={98} />
                 </div>
 
-                <div className="grid grid-cols-2 gap-5 p-5 md:grid-cols-3 md:gap-10 xl:p-0 w-full">
+                <div className="grid gap-5 p-5 grid-cols-3 md:gap-10 xl:p-0 w-full">
                     {skills.map((skill) => (
                         <Skill key={skill.id} skill={skill} />
                     ))}

@@ -5,9 +5,9 @@ type Props = {
 }
 export default function SkillCircle({ title, percentage }: Props) {
     return (
-      <div className="circle-progress relative p-3 text-center md:p-5">
+      <div className="circle-progress relative p-3 pb-0 text-center md:p-5 md:pb-5">
           <div className="relative mb-2 inline-block text-primary">
-              <svg className="circle" width="120" height="120" viewBox="0 0 120 120">
+              <svg className="circle" width="100" height="100" viewBox="0 0 120 120">
                   <circle className="circle-bg" cx="60" cy="60" r="54"
                           pathLength="1" strokeDasharray="round"
                           strokeWidth="12"></circle>

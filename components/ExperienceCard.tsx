@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {motion} from 'framer-motion'
-import {Experience} from '../../models/experience'
+import {Experience} from '../models/experience'
 
 type Props = {
     experience: Experience
@@ -11,8 +11,8 @@ type Props = {
 export default function ExperienceCard({experience}: Props) {
     return (
         <article key={experience.id} className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100
-    cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    w-[400px] sm:w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-2 opacity-40 hover:opacity-100
+    cursor-pointer transition-opacity duration-200 overflow-hidden md:p-10'>
             <motion.img src={experience.company_logo}
                         alt=''
                         className='w-32 h-32 rounded-full xl:w-[200px]

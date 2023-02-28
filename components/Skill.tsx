@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Skill as SkillType } from '../../models/skill';
+import { Skill as SkillType } from '../models/skill';
 
 type Props = {
     skill: SkillType
@@ -18,7 +18,7 @@ export default function Skill({ skill }: Props) {
                         width={10}
                         className="mr-1 w-4 h-4 md:mr-3 md:w-6 md:h-6 xl:w-6 xl:h-6 transition duration-300 ease-in-out"
                     />
-                    {skill.title}
+                    <span className="text-xs md:text-lg">{skill.title}</span>
                 </div>
                 <span className="text-sm font-medium dark:text-white pr-1">{skill.progress}%</span>
             </div>

@@ -1,8 +1,7 @@
 'use client'
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
-import Link from "next/link";
-import {PageInfo} from "../../models/pageInfo";
+import {PageInfo} from "../models/pageInfo";
 
 type Props = {
     pageInfo: PageInfo | null;
@@ -22,8 +21,10 @@ const Hero = ({ pageInfo }: Props) => {
         <div className="h-screen flex flex-col space-y-8 justify-center
         text-center overflow-hidden relative background-pattern-rhombus">
             <div className="relative flex flex-col items-center">
-                <img className="relative rounded-full mx-auto object-cover mb-5"
-                       src={pageInfo?.image}
+                <Image className="relative rounded-full mx-auto object-cover mb-5"
+                       src={pageInfo?.image as string}
+                       width={250}
+                       height={250}
                        alt='Roberto Duran'
 
                 />
@@ -31,7 +32,7 @@ const Hero = ({ pageInfo }: Props) => {
                     <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
                         {pageInfo?.role}
                     </h2>
-                    <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+                    <h1 className="flex items-center h-[160px] md:h-auto text-5xl lg:text-6xl font-semibold px-10">
                         <span className="text-gray-300 mr-3">{text}</span>
                         <Cursor cursorColor="#2a8b43" />
                     </h1>

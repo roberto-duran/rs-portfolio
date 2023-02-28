@@ -2,7 +2,7 @@
 
 import React from "react";
 import {motion} from "framer-motion";
-import {Project} from "../../models/project";
+import {Project} from "../models/project";
 
 type Props = {
     projects: Project[];
