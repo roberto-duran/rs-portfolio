@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
@@ -13,9 +14,9 @@
     "@prisma/client": "^4.10.1",
     "@vercel/og": "^0.2.0",
     "framer-motion": "^10.0.1",
-    "next": "^13.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.2",
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^5.15.0",
@@ -28,7 +29,7 @@
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
     "eslint": "8.35.0",
-    "eslint-config-next": "13.2.1",
+    "eslint-config-next": "^13.2.3",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "prisma": "^4.10.1",
