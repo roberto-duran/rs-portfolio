@@ -3,17 +3,18 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { db } from "../lib/db";
-import {Metadata} from 'next'
+import {Metadata} from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
     title: {
         default: 'Roberto Duran',
         template: '%s | Roberto Duran',
     },
-    description: 'Developer, writer, and creator.',
+    description: 'Developer, Next.js, Postgres, Databases.',
     openGraph: {
         title: 'Roberto Duran',
-        description: 'Developer, writer, and creator.',
+        description: 'Developer, Next.js, Postgres, Databases.',
         url: 'https://robertoduran.me',
         siteName: 'Roberto Duran',
         images: [
@@ -45,8 +46,7 @@ export const metadata: Metadata = {
         shortcut: '/favicon.ico',
     },
     verification: {
-        google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-        yandex: '14d2e73487fa6c71',
+        google: 'google'
     },
 };
 
@@ -65,11 +65,25 @@ export default async function RootLayout({children}: { children: React.ReactNode
     const socials = await getSocials();
     return (
         <html lang="en">
+            <Script strategy="lazyOnload" src={'https://www.googletagmanager.com/gtag/js?id=G-CYC1PNM4RH'} />
+
+            <Script strategy="lazyOnload">
+                {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-CYC1PNM4RH', {
+                        page_path: window.location.pathname,
+                        });
+                    `}
+            </Script>
+
         <body>
             <div className="bg-[rgb(11,18,35)] text-white h-screen snap-y snap-mandatory
              overflow-y-scroll overflow-x-hidden z-0">
                 <Header socials={socials}/>
                 <main>
+
                     {children}
                 </main>
                 <Footer />

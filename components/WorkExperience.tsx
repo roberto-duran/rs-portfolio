@@ -15,9 +15,13 @@ export default function WorkExperience({experiences}: Props) {
         </h3>
 
         <div className="w-full flex space-x-5 overflow-x-scroll ml-5 p-10 snap-x snap-mandatory">
-            {experiences?.map((experience) => (
-                <ExperienceCard key={experience.id} experience={experience} />
-            ))}
+            {experiences?.map((experience) => {
+                experience.date_started = new Date(experience.date_started).toDateString()
+                experience.date_ended = experience.date_ended
+                    ? new Date(experience.date_ended).toDateString()
+                    : 'Present'
+                return (<ExperienceCard key={experience.id} experience={experience} />)
+            })}
 
         </div>
     </div>

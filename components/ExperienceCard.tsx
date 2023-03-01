@@ -36,10 +36,8 @@ export default function ExperienceCard({experience}: Props) {
                     ))}
                 </div>
                 <p className='uppercase py-5 text-gray-300'>
-                    {new Date(experience.date_started).toDateString()} -{' '}
-                    {experience.date_ended ?
-                        new Date(experience.date_ended).toDateString() : 'Present'
-                    }
+                    {experience.date_started} -{' '}
+                    {experience.date_ended}
                 </p>
                 <ul className='list-disc space-y-4 ml-5 text-lg'>
                     {/*{experience.points.map((point, i) =>(*/}
