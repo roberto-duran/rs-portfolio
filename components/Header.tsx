@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import {Social} from "../models/social";
@@ -30,8 +30,8 @@ const Header = ({socials}: Props) => {
                         }}
                         className="flex flex-row items-center">
                 { socials.map((social) => (
-                    // @ts-ignore
-                    <SocialIcon url={social.url}
+
+                    <SocialIcon url={social.url as string}
                                 key={social.id}
                                 fgColor="gray"
                                 bgColor="transparent"
@@ -52,18 +52,18 @@ const Header = ({socials}: Props) => {
                             transition={{
                                 duration:1.5
                             }}
-                            className="flex flex-row items-center text-gray-300 cursor-pointer"
+                            className="flex flex-row items-center text-gray-200 cursor-pointer"
                             onClick={redirectLink}
                             data-link="contact"
                             >
-                    
                 <SocialIcon className="cursor-pointer"
                             network="email"
+                            href="#contact"
                             fgColor="gray"
                             bgColor="transparent"
+                            aria-label="email"
                 />
                 <span className="hidden md:inline-flex uppercase text-sm text-gray-400">Get in touch</span>
-                    
             </motion.div>
         </header>
     );

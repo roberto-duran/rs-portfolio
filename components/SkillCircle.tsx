@@ -20,7 +20,7 @@ export default function SkillCircle({ title, percentage }: Props) {
                         {percentage}%
                     </span>
           </div>
-          <h5>{title}</h5>
+          <h3>{title}</h3>
       </div>
     );
 };

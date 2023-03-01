@@ -52,7 +52,7 @@ const About = ({ pageInfo }: Props) => {
                 </div>
                 <div className="hidden mt-6 md:sticky md:bottom-5 md:flex md:flex-row md:justify-evenly">
                     <div className="text-center">
-                        <h4 className="text-6xl mb-3 "><span>10</span> +</h4>
+                        <h4 className="text-6xl mb-3 "><span>15</span> +</h4>
                         <p className="text-light">Years Experience</p>
                     </div>
 

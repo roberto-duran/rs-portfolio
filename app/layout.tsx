@@ -65,9 +65,9 @@ export default async function RootLayout({children}: { children: React.ReactNode
     const socials = await getSocials();
     return (
         <html lang="en">
-            <Script strategy="lazyOnload" src={'https://www.googletagmanager.com/gtag/js?id=G-CYC1PNM4RH'} />
+            <Script id="load-analytics" strategy="lazyOnload" src={'https://www.googletagmanager.com/gtag/js?id=G-CYC1PNM4RH'} />
 
-            <Script strategy="lazyOnload">
+            <Script id="analytics-init" strategy="lazyOnload">
                 {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
