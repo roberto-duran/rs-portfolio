@@ -64,7 +64,7 @@ async function getSocials() {
 export default async function RootLayout({children}: { children: React.ReactNode; }) {
     const socials = await getSocials();
     return (
-        <html>
+        <html lang="en">
         <body>
             <div className="bg-[rgb(11,18,35)] text-white h-screen snap-y snap-mandatory
              overflow-y-scroll overflow-x-hidden z-0">
