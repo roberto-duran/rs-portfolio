@@ -61,7 +61,10 @@ export default function ContactMe({email, phone_number, address}: Props) {
                     <input {...register('subject')} placeholder="Subject" className="contact-input h-[66px]" type="text"/>
 
                     <textarea {...register('message')} placeholder="Message" className="contact-input h-20 md:h-44 "></textarea>
-                    <button className="bg-defaultColor py-5 px-10 text-lg rounded-sm font-bold" type='submit'>Send Message</button>
+                    <button className="bg-green-900 py-5 px-10 text-xl rounded-sm font-bold
+                    hover:bg-green-600" type='submit'>
+                        Send Message
+                    </button>
                 </form>
             </div>
         </div>

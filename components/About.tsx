@@ -47,7 +47,10 @@ const About = ({ pageInfo }: Props) => {
                         </div>
                     </div>
                     <div className="py-5">
-                        <button className="w-full bg-defaultColor py-5 px-10 rounded-sm font-bold">Download CV</button>
+                        <button className="w-full bg-green-900 py-5 px-10 rounded-sm text-xl
+                        font-bold hover:bg-green-600 ">
+                            Download CV
+                        </button>
                     </div>
                 </div>
                 <div className="hidden mt-6 md:sticky md:bottom-5 md:flex md:flex-row md:justify-evenly">
