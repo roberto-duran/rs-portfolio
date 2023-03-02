@@ -16,7 +16,7 @@ export default function SkillCircle({ title, percentage }: Props) {
                           strokeDasharray={`0.${percentage}px 1px`}></circle>
               </svg>
               <span className="absolute left-1/2 top-1/2 -translate-y-1/2
-                    -translate-x-1/2 transform text-center text-xl text-body">
+                    -translate-x-1/2 transform text-center text-xl text-body text-white">
                         {percentage}%
                     </span>
           </div>

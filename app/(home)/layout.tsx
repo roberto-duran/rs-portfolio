@@ -1,8 +1,8 @@
 import "../styles/globals.css"
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { db } from "../lib/db";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { db } from "../../lib/db";
 import {Metadata} from 'next';
 import Script from 'next/script';
 

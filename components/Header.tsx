@@ -58,7 +58,7 @@ const Header = ({socials}: Props) => {
                             >
                 <SocialIcon className="cursor-pointer"
                             network="email"
-                            href="#contact"
+                            url="#contact"
                             fgColor="gray"
                             bgColor="transparent"
                             aria-label="email"
