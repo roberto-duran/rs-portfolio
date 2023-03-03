@@ -1,5 +1,6 @@
-import {BiHomeSmile, BiUser} from 'react-icons/bi'
+import {BiHomeSmile, BiUser, BiWrench} from 'react-icons/bi'
 import {IoSettingsSharp} from 'react-icons/io5'
+import Link from 'next/link'
 
 export default function SideBar() {
     return (
@@ -13,10 +14,14 @@ export default function SideBar() {
                         </div>
                     </li>
                     <li>
-                        <a href='#' className='flex flex-row items-center h-11 p-5 hover:bg-gray-600'>
+                        <Link href='/dashboard' className='flex flex-row items-center h-11 p-5 hover:bg-gray-600'>
                             <BiHomeSmile className='w-5 h-5' />
                             <span className='ml-2 text-sm tracking-wide truncate'>Dashboard</span>
-                        </a>
+                        </Link>
+                        <Link href='/dashboard/forms/skills' className='flex flex-row items-center h-11 p-5 hover:bg-gray-600'>
+                            <BiWrench className='w-5 h-5' />
+                            <span className='ml-2 text-sm tracking-wide truncate'>Skills</span>
+                        </Link>
                     </li>
                     <li className='px-5 hidden md:block'>
                         <div className='flex flex-row items-center mt-5 h-8'>

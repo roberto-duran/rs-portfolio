@@ -1,11 +1,12 @@
 import "../styles/globals.css"
-import React from "react";
+import React, {Suspense} from 'react'
 import {authOptions} from '../../pages/api/auth/[...nextauth]'
 import {getServerSession} from 'next-auth'
 import {redirect} from 'next/navigation'
 import BaseFooter from '../../components/BaseFooter'
 import DashboardHeader from './components/DashboardHeader'
 import SideBar from './components/SideBar'
+import Loading from './dashboard/loading'
 
 export default async function RootLayout({children}: { children: React.ReactNode; }) {
     const session = await getServerSession(authOptions);
@@ -19,8 +20,10 @@ export default async function RootLayout({children}: { children: React.ReactNode
                 <DashboardHeader image={session.user?.image || ''} />
                 <div className="flex flex-row h-[88.15vh]">
                     <SideBar />
-                    <main className="flex p-10 mx-auto">
-                        {children}
+                    <main className="flex py-10 mx-auto">
+                        <Suspense fallback={<Loading />}>
+                            {children}
+                        </Suspense>
                     </main>
                 </div>
                 <BaseFooter />
