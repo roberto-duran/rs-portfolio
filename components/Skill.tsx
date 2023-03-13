@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Skill as SkillType } from '../models/skill';
+import { ISkill as SkillType } from '../models/ISkill';
 import Image from 'next/image'
 
 type Props = {
@@ -15,8 +15,8 @@ export default function Skill({ skill }: Props) {
                     <Image
                         src={skill.image}
                         alt={skill.title}
-                        height={10}
-                        width={10}
+                        height={50}
+                        width={50}
                         className="mr-1 w-4 h-4 md:mr-3 md:w-6 md:h-6 xl:w-6 xl:h-6 transition duration-300 ease-in-out"
                     />
                     <span className="text-xs md:text-lg">{skill.title}</span>

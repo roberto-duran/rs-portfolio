@@ -5,6 +5,7 @@
 @import "plain.css";
 
 @layer components {
+  /* Home page START */
   .heroButton {
     @apply px-6 py-2 border border-defaultBorderColor rounded-sm uppercase text-xs font-semibold
            tracking-widest text-gray-400 transition-all hover:border-defaultColor/80
@@ -34,6 +35,11 @@
   .circle-progress .circle {
     @apply stroke-[#589f68] fill-none transform -rotate-90
   }
+  /* Home page END */
+
+  /* Dashboard START */
+
+  /* Dashboard END */
 }
 
 

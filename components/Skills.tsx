@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Skill from './Skill';
-import { Skill as SkillType } from '../models/skill';
+import { ISkill as SkillType } from '../models/ISkill';
 import SkillCircle from "./SkillCircle";
 
 type Props = {

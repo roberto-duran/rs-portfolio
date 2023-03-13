@@ -1,13 +1,21 @@
 'use client';
 
-import {ErrorMessage, Field, Form, Formik} from 'formik';
+import {Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import Input from '../Input'
+import {ISkill} from '../../../../models/ISkill'
 
-export default function SkillDetail() {
+type Props = {
+    newSkill: boolean,
+    skill: ISkill
+}
+
+export default function SkillDetail({newSkill, skill}: Props) {
     return (
-        <div>
-            <h1>Any place in your app!</h1>
+        <div className="min-w-[500px]">
+            <h1 className="text-2xl text-center p-5">
+                {newSkill? 'Add new Skill!' : 'Edit Skill'}
+            </h1>
             <Formik
                 initialValues={{
                     title: '',
@@ -28,15 +36,20 @@ export default function SkillDetail() {
             >
                 {({ isSubmitting }) => (
                     <Form className="flex flex-col space-y-4">
-                        <Input type={"text"} placeholder={'Add Title'} name={'title'} />
-                        <Input type={"number"} placeholder={'Add Progress'} name={'progress'} />
-                        <input type="file"
-                               name="image"
-                               accept="image/svg+xml"
-                               className="file-input file-input-bordered file-input-primary w-full" required />
+                        <Input type={"text"} placeholder={'Add Title'} name={'title'} value={skill.title} />
+                        <Input type={"number"} placeholder={'Add Progress'} name={'progress'} value={skill.progress} />
+                        <div className="flex flex-row space-x-4">
+                            {skill.image && (
+                                <img src={skill.image} className="w-12 h-12" />
+                            )}
+                            <input type="file"
+                                   name="image"
+                                   accept="image/svg+xml"
+                                   className="file-input file-input-bordered file-input-primary w-full" required />
+                        </div>
                         <div className="flex justify-between px-2">
-                            <label htmlFor="color">Body</label>
-                            <input type="color" id="color" name="color" required />
+                            <label htmlFor="color">Add Color</label>
+                            <input type="color" id="color" name="color" value={skill.color} required />
                         </div>
                         <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
                             Submit

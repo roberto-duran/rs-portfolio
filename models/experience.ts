@@ -1,4 +1,4 @@
-import {Skill} from './skill'
+import {ISkill} from './ISkill'
 
 export interface Experience {
     id: string;
@@ -11,5 +11,5 @@ export interface Experience {
     date_ended: string;
     job_description: string;
     url: string;
-    skills: Skill[];
+    skills: ISkill[];
 }

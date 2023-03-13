@@ -2,11 +2,11 @@
 
 import {redirect} from 'next/navigation'
 import Image from 'next/image'
-import { Skill } from '../../../../models/skill';
+import { ISkill } from '../../../../models/ISkill';
 import Link from 'next/link'
 
 type Props = {
-    skills: Skill[]
+    skills: ISkill[]
 }
 
 export default function SkillList({skills}: Props) {

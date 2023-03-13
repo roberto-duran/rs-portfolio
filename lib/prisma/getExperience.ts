@@ -1,4 +1,4 @@
-import { db } from './db';
+import { db } from '../db';
 
 export async function getExperience() {
   const experiences = await db.experience.findMany({

@@ -4,10 +4,10 @@ import WorkExperience from "../../components/WorkExperience";
 import Skills from "../../components/Skills";
 import Projects from "../../components/Projects";
 import ContactMe from "../../components/ContactMe";
-import {getPageInfo} from '../../lib/getPageInfo'
-import {getExperience} from '../../lib/getExperience'
-import {getSkills} from '../../lib/getSkills'
-import {getProjects} from '../../lib/getProjects'
+import {getPageInfo} from '../../lib/prisma/getPageInfo'
+import {getExperience} from '../../lib/prisma/getExperience'
+import {getSkills} from '../../lib/prisma/skill'
+import {getProjects} from '../../lib/prisma/getProjects'
 
 
 const HomePage  = async () => {

@@ -26,7 +26,8 @@ const Hero = ({ pageInfo }: Props) => {
                        width={250}
                        height={250}
                        alt='Roberto Duran'
-
+                       priority={true}
+                       placeholder={'empty'}
                 />
                 <div className="z-20">
                     <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">

@@ -6,7 +6,7 @@ import {redirect} from 'next/navigation'
 import BaseFooter from '../../components/BaseFooter'
 import DashboardHeader from './components/DashboardHeader'
 import SideBar from './components/SideBar'
-import Loading from './dashboard/loading'
+import Loading from './loading'
 
 export default async function RootLayout({children}: { children: React.ReactNode; }) {
     const session = await getServerSession(authOptions);
