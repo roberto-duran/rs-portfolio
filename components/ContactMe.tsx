@@ -52,10 +52,10 @@ export default function ContactMe({email, phone_number, address}: Props) {
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 min-w-[325px] md:min-w-[500px] px-10 md:px-0">
-                    <div className="flex flex-row md:flex-col gap-2">
-                        <input {...register('name')} placeholder="Name" className="contact-input h-[66px]" type="text"/>
+                    <div className="flex flex-col md:flex-row gap-2">
+                        <input {...register('name')} placeholder="Name" className="contact-input h-[66px] w-full" type="text"/>
 
-                        <input {...register('email')} placeholder="Email" className="contact-input h-[66px]" type="email"/>
+                        <input {...register('email')} placeholder="Email" className="contact-input h-[66px] w-full" type="email"/>
                     </div>
 
                     <input {...register('subject')} placeholder="Subject" className="contact-input h-[66px]" type="text"/>

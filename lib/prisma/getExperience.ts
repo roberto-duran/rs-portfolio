@@ -1,4 +1,4 @@
-import { db } from '../db';
+import { db } from "../db";
 
 export async function getExperience() {
   const experiences = await db.experience.findMany({
@@ -21,18 +21,21 @@ export async function getExperience() {
               title: true,
               image: true,
               progress: true,
-              color: true
-            }
-          }
-        }
-      }
+              color: true,
+            },
+          },
+        },
+      },
     },
     orderBy: {
-      date_started: 'desc'
-    }
+      date_started: "desc",
+    },
   });
 
   return experiences.map((experience) => {
-    return { ...experience, skills: experience.skills.map(skill => skill.Skill) }
+    return {
+      ...experience,
+      skills: experience.skills.map((skill) => skill.Skill),
+    };
   });
 }

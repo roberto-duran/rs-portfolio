@@ -49,6 +49,7 @@ model User {
   back_ground_information String?      @db.Citext
   phone_number            String?      @db.Citext
   address                 String?      @db.Citext
+  isAdmin                 Boolean      @default(false)
   Social                  Social[]
   Experience              Experience[]
   createdAt               DateTime     @default(now())

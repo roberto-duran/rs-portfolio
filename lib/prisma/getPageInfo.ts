@@ -11,6 +11,9 @@ export async function getPageInfo() {
       role: true,
       image: true,
       back_ground_information: true,
+    },
+    orderBy: {
+      createdAt: 'asc',
     }
   });
 
