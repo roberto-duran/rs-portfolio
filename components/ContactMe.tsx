@@ -25,7 +25,7 @@ export default function ContactMe({ email, phone_number, address }: Props) {
       className="h-screen flex relative flex-col items-center md:text-left
     md:flex-row max-w-full justify-evenly mx-auto"
     >
-      <h3 className="section-title">Contact</h3>
+      <h2 className="section-title">Contact</h2>
       <h3 className="hidden md:block section-sub-title">
         I have got just what you need.{" "}
         <span className="underline whitespace-nowrap underline-offset-8 decoration-defaultColor">
