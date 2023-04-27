@@ -15,11 +15,10 @@ type Skill = z.infer<typeof SkillSchema>;
 
 type Props = {
   newSkill: boolean;
-  onSubmit: (data: Skill) => void;
   skill: Skill;
 };
 
-export default function SkillDetail({ newSkill, skill, onSubmit }: Props) {
+export default function SkillDetail({ newSkill, skill }: Props) {
   const {
     register,
     handleSubmit,
@@ -33,7 +32,7 @@ export default function SkillDetail({ newSkill, skill, onSubmit }: Props) {
       <form
         className="flex flex-col space-y-4"
         onSubmit={handleSubmit((data) => {
-          onSubmit(data);
+          console.log(data);
         })}
       >
         <input

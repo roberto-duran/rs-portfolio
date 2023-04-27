@@ -13,7 +13,7 @@ export async function GET(request: NextRequest, { params }: any) {
   }
 }
 
-export async function PATH(request: NextRequest, { params }: any) {
+export async function PATCH(request: NextRequest, { params }: any) {
   try {
     const { skillId } = params;
     const { skill, error } = await updateSkill(skillId);
