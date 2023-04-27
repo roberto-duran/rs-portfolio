@@ -136,3 +136,13 @@ model Project {
   updatedAt   DateTime           @default(now()) @updatedAt
   skills      Skill_to_Project[]
 }
+
+model ContactMail {
+  id        String   @id @default(cuid())
+  name      String   @db.Citext
+  email     String   @db.Citext
+  subject   String   @db.Citext
+  message   String   @db.Citext
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
