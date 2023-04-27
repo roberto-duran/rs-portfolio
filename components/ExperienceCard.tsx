@@ -27,7 +27,7 @@ export default function ExperienceCard({ experience }: Props) {
         viewport={{ once: true }}
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{experience.job_title}</h4>
+        <h3 className="text-4xl font-light">{experience.job_title}</h3>
         <p className="font-bold text-2xl mt-1">{experience.company_name}</p>
         <div className="flex space-x-2 my-2">
           {experience.skills.map((skill) => (

@@ -58,14 +58,14 @@ export default function ContactMe({ email, phone_number, address }: Props) {
               <input
                 {...register("name")}
                 placeholder="Name"
-                className="contact-input h-[66px] w-full"
+                className="contact-input h-[55px] sm:[66px] w-full"
                 type="text"
               />
 
               <input
                 {...register("email")}
                 placeholder="Email"
-                className="contact-input h-[66px] w-full"
+                className="contact-input h-[55px] sm:[66px] w-full"
                 type="email"
               />
             </div>
@@ -73,14 +73,14 @@ export default function ContactMe({ email, phone_number, address }: Props) {
             <input
               {...register("subject")}
               placeholder="Subject"
-              className="contact-input h-[66px]"
+              className="contact-input h-[55px] sm:[66px]"
               type="text"
             />
 
             <textarea
               {...register("message")}
               placeholder="Message"
-              className="contact-input h-20 md:h-44 "
+              className="contact-input h-20 md:h-44"
             ></textarea>
             <button
               className="bg-green-900 py-5 px-10 text-xl rounded-sm font-bold

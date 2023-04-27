@@ -7,9 +7,9 @@
 @layer components {
   /* Home page START */
   .heroButton {
-    @apply px-6 py-2 border border-defaultBorderColor rounded-sm uppercase text-xs font-semibold
+    @apply px-2 py-2 border border-defaultBorderColor rounded-sm uppercase text-xs font-semibold
            tracking-widest text-gray-400 transition-all hover:border-defaultColor/80
-           hover:text-defaultColor/90 mx-1 ;
+           hover:text-defaultColor/90 mx-1 sm:px-6;
   }
   .section-title {
     @apply absolute top-16 lg:top-24 uppercase tracking-[20px]
@@ -20,9 +20,9 @@
   }
 
   .contact-input {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-defaultBorderColor
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-2 border-defaultBorderColor
     text-gray-500 placeholder-gray-500 transition-all focus:border-defaultColor
-    focus:text-defaultColor hover:border-defaultColor;
+    focus:text-defaultColor hover:border-defaultColor sm:py-4;
   }
 
   .contact-info {

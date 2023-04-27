@@ -48,12 +48,12 @@ export default function Projects({ projects }: Props) {
               />
             </motion.div>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h3 className="text-4xl font-semibold text-center">
                 <span className="underline underline-offset-8 decoration-defaultColor/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
                 {project.title}
-              </h4>
+              </h3>
 
               <div className="flex items-center space-x-2 justify-center">
                 {project.skills.map((skill) => (

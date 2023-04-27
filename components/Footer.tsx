@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex items-center justify-center z-50">
         <a href="/" onClick={scrollToTop}>
           <Image
-            className="rounded-full filter opacity-50 hover:opacity-100"
+            className="hidden rounded-full filter opacity-50 hover:opacity-100 sm:block"
             width={40}
             height={40}
             src="/images/base.png"
